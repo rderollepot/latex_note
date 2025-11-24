@@ -1,0 +1,58 @@
+% !TeX program = xelatex
+\RequirePackage[l2tabu, orthodox]{nag}
+\documentclass[12pt, a4paper]{article}
+\special{pdf:minorversion 7}
+
+% =============================================================================
+% CHARGEMENT DES CONFIGURATIONS
+% =============================================================================
+
+\input{setup/packages.tex}     % Packages LaTeX
+\input{config.tex}             % Variables de configuration
+\input{setup/styles.tex}       % Design et mise en page
+\input{setup/macros.tex}       % Macros personnalisées
+
+% MÉTADONNÉES PDF
+\hypersetup{
+    pdftitle={\NoteTitle},
+    pdfauthor={\NoteAuthor}
+}
+
+% =============================================================================
+% DÉBUT DU DOCUMENT
+% =============================================================================
+
+\begin{document}
+
+% Bloc Titre Simple
+\begin{center}
+    {\huge \bfseries \color{primaryColor} \NoteTitle} \\[0.5em]
+    {\small \color{gray} \NoteAuthor \hfill \NoteDate}
+    \vspace{0.2cm}
+    \hrule height 1pt
+    \vspace{0.5cm}
+\end{center}
+
+% Contenu
+\section{Introduction}
+Ceci est un modèle de note technique simplifié. Il reprend la charte graphique du rapport complet mais dans un format plus léger (classe \texttt{article}).
+
+\section{Utilisation des boîtes}
+Les macros de boîtes sont disponibles :
+
+\begin{summarybox}{Résumé}
+    Ceci est une boîte de résumé. Idéale pour les conclusions ou les points clés.
+\end{summarybox}
+
+\begin{infobox}{Information}
+    Ceci est une boîte d'information pour des détails supplémentaires.
+\end{infobox}
+
+\begin{alertbox}{Attention}
+    Ceci est une boîte d'alerte pour les points critiques.
+\end{alertbox}
+
+\section{Conclusion}
+La mise en page est gérée automatiquement. Le pied de page contient les logos en filigrane.
+
+\end{document}

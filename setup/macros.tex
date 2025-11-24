@@ -1,0 +1,33 @@
+% =============================================================================
+% MACROS - Boîtes et commandes
+% =============================================================================
+
+% Boîte de résumé
+\newtcolorbox{summarybox}[1]{
+    colback=primaryColor!5!white,
+    colframe=primaryColor,
+    fonttitle=\bfseries,
+    title=#1,
+    sharp corners=south,
+    boxrule=0.5mm
+}
+
+% Boîte d'information
+\newtcolorbox{infobox}[1]{
+    colback=brandCyan!5!white,
+    colframe=brandCyan,
+    fonttitle=\bfseries,
+    title=#1,
+    sharp corners=south,
+    boxrule=0.5mm
+}
+
+% Boîte d'alerte
+\newtcolorbox{alertbox}[1]{
+    colback=red!5!white,
+    colframe=red!75!black,
+    fonttitle=\bfseries,
+    title=#1,
+    sharp corners=south,
+    boxrule=0.5mm
+}

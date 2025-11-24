@@ -1,0 +1,45 @@
+% =============================================================================
+% STYLES - Mise en page et design
+% =============================================================================
+
+% Marges
+\geometry{
+    top=2cm, bottom=2cm, left=2cm, right=2cm,
+    footskip=1.5cm
+}
+
+% En-têtes et pieds de page
+\pagestyle{fancy}
+\fancyhf{} % Efface tout
+
+\renewcommand{\headrulewidth}{0pt} % Pas de ligne en haut
+\renewcommand{\footrulewidth}{0.4pt}
+\renewcommand{\footrule}{\hbox to\headwidth{\color{primaryColor}\leaders\hrule height \footrulewidth\hfill}}
+
+% Pied de page avec logos "grayed out" et numéro de page aligné
+\fancyfoot[C]{
+    \begin{tikzpicture}[opacity=0.5] % Opacité globale à 50%
+        \node[anchor=east] at (-4,0) {\includegraphics[height=0.8cm]{\LogoLeft}};
+        \node[anchor=center] at (0,0) {\includegraphics[height=1cm]{\LogoCenter}};
+        \node[anchor=west] at (4,0) {\includegraphics[height=1cm]{\LogoRight}};
+        % Numéro de page aligné à droite, au même niveau
+        \node[anchor=east] at (8,0) {\footnotesize \color{gray} \thepage};
+    \end{tikzpicture}
+}
+
+% Titres (Simplified)
+\titleformat{\section}
+    {\normalfont\Large\bfseries\color{primaryColor}}
+    {\thesection}{1em}{}
+
+\titleformat{\subsection}
+    {\normalfont\large\bfseries\color{secondaryColor}}
+    {\thesubsection}{1em}{}
+
+\titleformat{\subsubsection}
+    {\normalfont\normalsize\bfseries\color{tertiaryColor}}
+    {\thesubsubsection}{1em}{}
+
+% Espacements
+\titlespacing*{\section}{0pt}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}
+\titlespacing*{\subsection}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
